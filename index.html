@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section id= Description>
+      <div class="top-container">
+        <h1>Hello People</h1>
+        <p>Let's have a look at your compatibility</p>
+
+        <button type="button" onclick="myFunction()">Click Here</button>
+        <p id="value"></p>
+      </div>
+    </section>
+    <section id="bottom">
+      <div class="below-container">
+        <marquee direction="right">This is just for entertaining purpose,Play it As a Game</marquee>
+      </div>
+
+    </section>
+    <script>
+      function myFunction(){
+        var name1 = prompt("Your name:");
+        var name2 = prompt("Their name:");
+        var Lovescore = Math.random()*100;
+        Lovescore = Math.floor(Lovescore)+1;
+        if(Lovescore>70){
+             return document.getElementById('value').innerHTML = Lovescore+"%"+" You love each other so much";
+        }
+        
+        else{
+             return document.getElementById('value').innerHTML = Lovescore+"%"+" Oops!Try to find a better match";
+        }
+      }
+    </script>
+  </body>
+</html>
